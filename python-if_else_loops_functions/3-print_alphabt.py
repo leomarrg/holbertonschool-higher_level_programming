@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-charCode = 61
-for charCode in range(ord('a'), ord('z')):
-    if (charCode == ord('q') or charCode == ord('e')):
-        continue
-    print("{}".format(chr(charCode)), end = '')
+for letter in range(97, 123):
+    if chr(letter) is not 'q' and chr(letter) is not 'e':
+        print("{}".format(chr(letter)), end="")
