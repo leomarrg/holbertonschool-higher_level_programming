@@ -8,5 +8,5 @@ if (number % 10 > 5):
     print(f"{strLD} {number} {strIs} {lastDig} and is greater than 5")
 elif (number % 10 == 0):
     print(f"{strLD} {number} {strIs} {lastDig} and is 0")
-elif (number % 10 < 6):
+elif (number % 10 < 0):
     print(f"{strLD} {number} {strIs} {lastDig} and is less than 6 and not 0")
