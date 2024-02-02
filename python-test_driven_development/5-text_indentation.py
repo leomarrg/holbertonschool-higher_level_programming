@@ -14,14 +14,20 @@ def text_indentation(text):
     Returns:
         Nothing
     """
-    punctuations = ['.', '?', ':']
-    current_line = ""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-    for char in text:
-        current_line += char
-        if char in punctuations:
-            print(current_line.strip() + '\n')
-            current_line = ""
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
 
-    if current_line:
-        print(current_line.strip())
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1
