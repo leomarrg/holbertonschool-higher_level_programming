@@ -78,4 +78,3 @@ class Square:
     def __str__(self):
         """Prints in stdout the square with the character #"""
         return self.pos_print()
-
