@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+"""
+Function that adds two intefers
+"""
 def add_integer(a, b=98):
     """
-    Funtion that adds two integers.
-
     Parameters:
         a
         b by default is 98
