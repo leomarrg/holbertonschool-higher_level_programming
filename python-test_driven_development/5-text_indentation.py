@@ -2,10 +2,12 @@
 """
 Prints a text with 2 new lines after each . ? :
 """
+
+
 def text_indentation(text):
     """
     Parameters:
-        text: string 
+        text: string
 
     Raises:
         TyperError
