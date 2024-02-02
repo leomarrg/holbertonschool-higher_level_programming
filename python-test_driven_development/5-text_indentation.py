@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+"""
+Prints a text with 2 new lines after each . ? :
+"""
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each . ? :
-
     Parameters:
         text: string 
-    
+
+    Raises:
+        TyperError
+        ValueError
+
     Returns:
         Nothing
     """
