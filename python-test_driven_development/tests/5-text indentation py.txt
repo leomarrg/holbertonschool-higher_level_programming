@@ -1,0 +1,45 @@
+How to Use 5-text_indentation.py
+This script defines a function text_indentation(text).
+
+Usage
+``text_indentation(...)``` prints a text with 2 new lines after each '.', '?', or ':'.
+
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text = "This is a sample text. It has some punctuation? Yes, indeed: it does."
+>>> text_indentation(text)
+This is a sample text.
+It has some punctuation?
+Yes, indeed: it does.
+Empty Text
+Handles cases where the text is an empty string.
+
+
+>>> text_indentation("")
+Punctuation at the Beginning
+Handles cases where the punctuation is at the beginning of the text.
+
+
+>>> text_indentation(". This is a sample text.")
+
+
+>>> text_indentation(": It has some punctuation? Yes, indeed.")
+No Punctuation
+Handles cases where there is no punctuation in the text.
+
+
+>>> text_indentation("This is a text without any punctuation")
+Unicode Characters
+Handles Unicode characters in the text.
+
+
+>>> text_indentation("This is a sample text. It has some punctuation? 是的, 确实: 它有.")
+Mixed Punctuation
+Handles cases where there is a mix of punctuation in the text.
+
+
+>>> text_indentation("This text has dots. It also has question marks? And colons: all together.")
+
+
+
+

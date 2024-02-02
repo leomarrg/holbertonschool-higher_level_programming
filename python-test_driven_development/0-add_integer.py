@@ -1,0 +1,19 @@
+def add_integer(a, b=98):
+    """
+    Funtion that adds two integers.
+
+    Parameters:
+        a
+        b by default is 98
+
+    Returns:
+        sum of a and b
+    """
+    if (type(a) not in (int, float)) or (type(b) not in (int, float)):
+        raise TypeError("a must be an integer or b must be an integer")
+
+    a = int(a)
+    b = int(b)
+
+    result = a + b
+    return result

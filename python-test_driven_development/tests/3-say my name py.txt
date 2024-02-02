@@ -1,0 +1,53 @@
+How to Use 3-say_my_name.py
+This script defines a function say_my_name(first_name, last_name="").
+
+Usage
+``say_my_name(...)``` prints a formatted string with the provided first and last names.
+
+::
+
+python
+Copy code
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+>>> say_my_name("Alice")
+My name is Alice
+Type Check - First Name
+Ensures that the first_name parameter is a string. Raises a TypeError if not.
+
+
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+
+
+>>> say_my_name(None, "Doe")
+Traceback (most recent call last):
+
+
+>>> say_my_name("John", 456)
+Traceback (most recent call last):
+
+
+>>> say_my_name("Alice", None)
+Traceback (most recent call last):
+
+
+>>> say_my_name("John", "")
+My name is John
+
+
+>>> say_my_name("Alice", last_name="")
+My name is Alice
+Unicode Characters
+Handles Unicode characters in the names.
+
+
+>>> say_my_name("José", "Álvarez")
+My name is José Álvarez
+
+
+
+
+

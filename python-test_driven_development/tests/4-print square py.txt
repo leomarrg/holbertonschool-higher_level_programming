@@ -1,0 +1,51 @@
+How to Use 4-print_square.py
+This script defines a function print_square(size).
+
+Usage
+``print_square(...)``` prints a square using the character '#'.
+
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(3)
+###
+###
+###
+
+>>> print_square(0)
+Type Check - Size
+Ensures that the size parameter is an integer. Raises a TypeError if not.
+
+
+>>> print_square("3")
+Traceback (most recent call last):
+
+
+>>> print_square(3.5)
+Traceback (most recent call last):
+
+
+>>> print_square(-3)
+Traceback (most recent call last):
+
+
+>>> print_square(0)
+Large Size
+Handles cases where the size parameter is a large integer.
+
+
+>>> print_square(100)
+####################################################################################################
+Unicode Characters
+Handles Unicode characters in the square.
+
+
+>>> print_square(3)
+###
+###
+###
+
+
+>>> print_square(3)
+###
+###
+###
