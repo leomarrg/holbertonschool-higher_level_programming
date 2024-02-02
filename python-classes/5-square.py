@@ -2,11 +2,13 @@
 """
 Define a class Square
 """
+
+
 class Square:
 
     """
-    Class that defines a square    
-    
+    Class that defines a square
+
     """
     def __init__(self, size=0):
         """
@@ -17,12 +19,14 @@ class Square:
             size
         """
         self.__size = size
+
     @property
     def size(self):
         """
         Returns size of square
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """

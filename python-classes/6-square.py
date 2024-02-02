@@ -2,11 +2,13 @@
 """
 Define a class Square
 """
+
+
 class Square:
 
     """
-    Class that defines a square    
-    
+    Class that defines a square
+
     """
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -18,14 +20,17 @@ class Square:
         """
         self.__size = size
         self.position = position
+
     @property
     def size(self):
+
         """
         Private instance attribute
 
         Returns size of square
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """
@@ -43,7 +48,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     @property
     def position(self):
         """
@@ -52,7 +57,7 @@ class Square:
         Returns: tuple: position of the square
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
@@ -60,15 +65,15 @@ class Square:
 
         Parameters:
             Value: (tuple): the position to set
-        
+
         Raises:
             TypeError:
                 if poisition is not a tuple of 2 positive ints
-        """ 
+        """
         if (type(value) is not tuple or
-            len(value) != 2 or
-            not all(type(num) is int for num in value) or
-            not all(num >= 0 for num in value)):
+                len(value) != 2 or
+                not all(type(num) is int for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
