@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def common_elements(set_1, set_2):
-    return (set_1 & set_2)
+def multiply_list_map(my_list=[], number=0):
+    return list(map(lambda x: x * number, my_list))
