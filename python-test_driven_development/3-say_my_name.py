@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Prints a formatted string with the provided first and last name
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Prints a formatted string with the provided first and last names.
