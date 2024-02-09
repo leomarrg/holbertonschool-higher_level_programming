@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 import json
 
+""""
+Loads data from a json file and returns object
+"""
+
 def load_from_json_file(filename):
     """
     Loads data from a JSON file and returns the corresponding Python object.

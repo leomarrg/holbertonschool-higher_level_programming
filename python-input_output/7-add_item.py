@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import sys
+"""
+Adds all args to a list and saves them to a file
+"""
 
 def load_from_json_file(filename):
     if __name__ == "__main__":
