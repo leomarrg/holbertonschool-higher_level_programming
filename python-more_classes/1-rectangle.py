@@ -7,7 +7,6 @@ Class that defines a rectangle
 class Rectangle:
     """
     Represents a rectangle
-
     Private Instance Attribute:
         width: width of rectangle
         height: height of rectangle
@@ -45,12 +44,14 @@ class Rectangle:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-
-        self._width = value
+        try:
+            if not isinstance(value, int):
+                raise TypeError("width must be an integer")
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            self._width = value
+        except Exception as e:
+            print("[{}] {}".format(e.__class__.__name__, e))
 
     @property
     def height(self):
@@ -74,8 +75,11 @@ class Rectangle:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self._height = value
+        try:
+            if not isinstance(value, int):
+                raise TypeError("height must be an integer")
+            if value < 0:
+                raise ValueError("height must be >= 0")
+            self._height = value
+        except Exception as e:
+            print("[{}] {}".format(e.__class__.__name__, e))
