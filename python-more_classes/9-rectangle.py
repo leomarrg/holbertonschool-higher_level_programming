@@ -3,6 +3,7 @@
 Class that defines a rectangle
 """
 
+
 class Rectangle:
     """
     Represents a rectangle
@@ -15,7 +16,7 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-    def __init__(self, width=0, height=0): 
+    def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle instance with width and height.
 
@@ -65,7 +66,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return self._height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -98,17 +99,20 @@ class Rectangle:
         Calculates the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle, or 0 if either the width or height is 0.
+            int: The perimeter of the rectangle,
+            or 0 if either the width or height is 0.
         """
         if self.width <= 0 or self.height <= 0:
             return 0
         return 2 * (self.width + self.height)
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle.
 
-        The rectangle is represented by the 'print_symbol' class attribute. If the width or height of the rectangle is 0, an empty string is returned.
+        The rectangle is represented by the 'print_symbol' class attribute.
+        If the width or height of the rectangle is 0,
+        an empty string is returned.
 
         Returns:
             str: A string representation of the rectangle.
@@ -117,12 +121,14 @@ class Rectangle:
             return ""
         else:
             return (str(self.print_symbol) * self.width + "\n") * self.height
-    
+
     def __repr__(self):
         """
-        Returns a string representation of the rectangle that can be used to recreate the object.
+        Returns a string representation of the rectangle
+        that can be used to recreate the object.
 
-        The string is in the format 'Rectangle(width, height)', where 'width' and 'height' are the width and height of the rectangle, respectively.
+        The string is in the format 'Rectangle(width, height)', where 'width'
+        and 'height' are the width and height of the rectangle, respectively.
 
         Returns:
             str: A string representation of the rectangle.
@@ -131,7 +137,8 @@ class Rectangle:
 
     def __del__(self):
         """
-        Prints a goodbye message and decrements the class variable 'number_of_instances' when the rectangle is deleted.
+        Prints a goodbye message and decrements the class variable
+        'number_of_instances' when the rectangle is deleted.
 
         This method is called when the rectangle object is
         about to be destroyed. It prints "Bye rectangle..."
@@ -142,11 +149,11 @@ class Rectangle:
         if Rectangle.number_of_instances > 0:
             Rectangle.number_of_instances -= 1
 
-    
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
-        Compares the area of two Rectangle instances and returns the one with the bigger or equal area.
+        Compares the area of two Rectangle instances
+        and returns the one with the bigger or equal area.
 
         Args:
             rect_1 (Rectangle): The first rectangle to compare.
@@ -156,7 +163,8 @@ class Rectangle:
             Rectangle: The rectangle with the bigger or equal area.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is
+            not an instance of Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -166,18 +174,21 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-        
+
     @classmethod
     def square(cls, size=0):
         """
         Creates a new Rectangle instance with width and height equal to 'size'.
 
-        This method is a class method and returns a new Rectangle instance where the width and height are equal, making it a square.
+        This method is a class method and returns a new Rectangle
+        instance where the width and height are equal, making it a square.
 
         Args:
-            size (int, optional): The size of the sides of the square. Defaults to 0.
+            size (int, optional): The size of the
+            sides of the square. Defaults to 0.
 
         Returns:
-            Rectangle: A new Rectangle instance with width and height equal to 'size'.
+            Rectangle: A new Rectangle instance with
+            width and height equal to 'size'.
         """
         return cls(size, size)

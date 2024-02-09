@@ -13,7 +13,7 @@ class Rectangle:
         width: width of rectangle
         height: height of rectangle
     """
-    def __init__(self, width=0, height=0): 
+    def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle instance with width and height.
 
@@ -62,7 +62,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return self._height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -102,13 +102,13 @@ class Rectangle:
             return 0
         return 2 * (self.width + self.height)
 
-    
     def __str__(self):
         """
         Returns a string representation of the rectangle.
 
-        The rectangle is represented by the '#' character. 
-        If the width or height of the rectangle is 0, an empty string 
+        The rectangle is represented by the '#' character.
+        If the width or height of the rectangle is 0, an empty
+        string
         is returned.
 
         Returns:
@@ -123,7 +123,6 @@ class Rectangle:
             rectangle_str += "\n"
         return rectangle_str
 
-    
     def __repr__(self):
         """
         Returns:
@@ -133,13 +132,13 @@ class Rectangle:
 
     def __del__(self):
         """
-        Prints a goodbye message and decrements the 
-        class variable 'number_of_instances' when the rectangle is 
+        Prints a goodbye message and decrements the
+        class variable 'number_of_instances' when the rectangle is
         deleted.
 
-        This method is called when the rectangle object is 
-        about to be destroyed. It prints "Bye rectangle..." 
-        to the console and decrements the 'number_of_instances' 
+        This method is called when the rectangle object is
+        about to be destroyed. It prints "Bye rectangle..."
+        to the console and decrements the 'number_of_instances'
         class variable by 1 if it's greater than 0.
         """
         print("Bye rectangle...")
