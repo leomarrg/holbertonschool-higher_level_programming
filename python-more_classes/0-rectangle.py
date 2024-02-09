@@ -4,6 +4,7 @@ Class that defines a rectangle
 
 """
 
+
 class Rectangle:
     """
     Represents a triangle
