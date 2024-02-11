@@ -1,0 +1,74 @@
+# Import the MyList class
+>>> MyList = __import__('1-my_list').MyList
+
+# Create an instance of MyList and append some numbers
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)  # Expected output: [1, 4, 2, 3, 5]
+
+# Print the sorted list
+>>> my_list.print_sorted()  # Expected output: [1, 2, 3, 4, 5]
+
+# Verify that the original list is unchanged
+>>> print(my_list)  # Expected output: [1, 4, 2, 3, 5]
+
+# Test with an undefined object
+>>> my_list2.print_sorted()  # This should raise a NameError
+
+# Test with a list
+>>> lst = [7, 2, 5]
+>>> my_list = MyList(lst)
+>>> my_list.print_sorted()  # Expected output: [2, 5, 7]
+
+# Test with an empty list
+>>> elst = []
+>>> my_list = MyList(elst)
+>>> my_list.print_sorted()  # Expected output: []
+
+# Test with a single number
+>>> my_list = MyList()
+>>> my_list.append(13)
+>>> my_list.print_sorted()  # Expected output: [13]
+>>> print(my_list)  # Expected output: [13]
+
+# Test with the same number multiple times
+>>> my_list2 = MyList()
+>>> my_list2.append(13)
+>>> my_list2.append(13)
+>>> my_list2.append(13)
+>>> my_list2.append(13)
+>>> my_list2.print_sorted()  # Expected output: [13, 13, 13, 13]
+
+# Test with a list as the parent object
+>>> my_list = [56, 8, 98]
+>>> my_list.print_sorted()  # This should raise an AttributeError
+
+# Test with negative numbers
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(89)
+>>> my_list.append(17)
+>>> my_list.append(-12)
+>>> my_list.append(76)
+>>> my_list.append(-13)
+>>> my_list.print_sorted()  # Expected output: [-13, -12, 17, 76, 89]
+
+# Test Boolean
+>>> l = MyList()
+>>> l.append(-200)
+>>> l.append(200)
+>>> l.append(-3)
+>>> print(l)  # Expected output: [-200, 200, -3]
+>>> id(l) is not id(l.print_sorted())  # Expected output: True
+
+# Test type, isinstance and issubclass
+>>> type(MyList())  # Expected output: <class '1-my_list.MyList'>
+>>> isinstance(MyList, object)  # Expected output: True
+>>> isinstance(MyList, list)  # Expected output: False
+>>> issubclass(MyList, list)  # Expected output: True
+>>> 'print_sorted' in dir(MyList)  # Expected output: True
+
