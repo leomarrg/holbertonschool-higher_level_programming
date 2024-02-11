@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""
+Class Base geometry
+"""
+
+
 class BaseGeometry:
     """
-    A class named BaseGeometry.
+    Represents BaseGeometry.
     """
     
     def area(self):

@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""
+Class Base geometry
+"""
+
+
 class BaseGeometry:
     """
-    A class named BaseGeometry.
+    A class represents BaseGeometry.
     """
     
     def area(self):
@@ -28,6 +33,10 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
+"""
+Class rectangle
+"""
 
 
 class Rectangle(BaseGeometry):
