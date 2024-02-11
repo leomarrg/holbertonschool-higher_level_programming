@@ -4,13 +4,14 @@ import json
 Function that returns a JSON representation of an object
 """
 
+
 def to_json_string(my_obj):
     """
     Function that returns the JSON representation of an object (string).
-    
+
     Args:
         my_obj: The object to convert to a JSON string.
-        
+
     Returns:
         The JSON string representation of my_obj.
     """

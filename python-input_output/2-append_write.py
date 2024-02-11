@@ -2,14 +2,17 @@
 """
 Function that appends a string
 """
+
+
 def append_write(filename="", text=""):
     """
-    Function that appends a string at the end of a text file (UTF8) and returns the number of characters added.
-    
+    Function that appends a string at the end of a text
+    file (UTF8) and returns the number of characters added.
+
     Args:
         filename (str): The name of the file to append to.
         text (str): The text to append to the file.
-        
+
     Returns:
         The number of characters added.
     """

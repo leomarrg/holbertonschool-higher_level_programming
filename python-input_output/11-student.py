@@ -2,6 +2,8 @@
 """
 Class that defines a students
 """
+
+
 class Student:
     """
     This class defines a student with first_name,
@@ -33,7 +35,7 @@ class Student:
             if key in attrs:
                 new_dict[key] = value
         return new_dict
-        
+
     def reload_from_json(self, json):
         """Reload from json"""
         for key, value in json.items():

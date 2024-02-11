@@ -2,6 +2,8 @@
 """
 Class that defines a students
 """
+
+
 class Student:
     """
     This class defines a student with first_name,
