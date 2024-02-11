@@ -2,13 +2,17 @@
 """
 Function that returns list of available attributes
 """
+
+
 def lookup(obj):
     """
-    Function to return the list of available attributes and methods of an object.
-    
+    Function to return the list of available attributes and
+    methods of an object.
+
     Args:
-        obj: The object whose attributes and methods are to be returned.
-        
+        obj: The object whose attributes and methods
+        are to be returned.
+
     Returns:
         A list of attributes and methods of the object.
     """

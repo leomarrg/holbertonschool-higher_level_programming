@@ -8,7 +8,7 @@ class BaseGeometry:
     """
     A class represents BaseGeometry.
     """
-    
+
     def area(self):
         """
         Public instance method that calculates the area.
@@ -16,15 +16,15 @@ class BaseGeometry:
             Exception: Always, with the message 'area() is not implemented'.
         """
         raise Exception("area() is not implemented")
-        
+
     def integer_validator(self, name, value):
         """
         Public instance method that validates value.
-        
+
         Args:
             name (str): The name of the value.
             value (int): The value to validate.
-            
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less or equal to 0.
@@ -34,23 +34,25 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 """
 Class rectanlge
 """
+
 
 class Rectangle(BaseGeometry):
     """
     A class named Rectangle that inherits from BaseGeometry.
     """
-    
+
     def __init__(self, width, height):
         """
         Instantiates a Rectangle object.
-        
+
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            
+
         Raises:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less or equal to 0.
@@ -63,7 +65,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         """
         Calculates the area of the rectangle.
-        
+
         Returns:
             The area of the rectangle.
         """
@@ -72,7 +74,7 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """
         Returns a string representation of the rectangle.
-        
+
         Returns:
             A string in the format '[Rectangle] <width>/<height>'.
         """

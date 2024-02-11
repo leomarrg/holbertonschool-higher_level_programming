@@ -8,7 +8,7 @@ class BaseGeometry:
     """
     Represents BaseGeometry.
     """
-    
+
     def area(self):
         """
         Public instance method that calculates the area.
