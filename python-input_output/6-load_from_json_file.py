@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import json
-
 """"
 Loads data from a json file and returns object
 """
+import json
 
 def load_from_json_file(filename):
     """
