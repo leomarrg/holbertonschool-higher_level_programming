@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
 Function that writes an object to a text file
 """
+import json
 
 def save_to_json_file(my_obj, filename):
     """
