@@ -1,0 +1,45 @@
+#!/usr/bin/python3
+"""
+Defining a class called Rectangle
+"""
+from models.base import Base
+
+
+class Rectangle(Base):
+    """
+    Class that defines a new rectangle
+    """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    @property
+    def width(self):
+        """method width getter"""
+        return self.__width
+
+    @width.setter
+    def width (self, value):
+        """method width setter"""
+        if isinstance(value, int):
+            raise TypeError (" must be an int")
+        if value < 0:
+            raise ValueError ("Width must be a positive number")
+        self.__width = value
+
+    @property
+    def height(self):
+        """method height getter"""
+        return self.__height
+
+    def height(self, value):
+        """method height setter"""
+        if isinstance(value, int):
+            raise TypeError ("Height must be an int")
+        if value < 0:
+            raise ValueError ("Height value must be 0 or more")
+        self.__height = value
