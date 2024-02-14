@@ -75,4 +75,4 @@ class Rectangle(Base):
     """Task 4"""
     """Public method that returns area of a rectangle"""
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
