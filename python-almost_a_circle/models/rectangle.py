@@ -84,6 +84,7 @@ class Rectangle(Base):
     """Task 5"""
 
     def display(self):
+        """Public method that prints a rectangle #"""
         if self.width == 0 or self.height == 0:
             print("")
     
