@@ -16,7 +16,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-
+    
     @property
     def width(self):
         """method width getter"""
@@ -25,7 +25,7 @@ class Rectangle(Base):
     @width.setter
     def width (self, value):
         """method width setter"""
-        if isinstance(value, int):
+        if not isinstance(value, int):
             raise TypeError (" must be an int")
         if value < 0:
             raise ValueError ("Width must be a positive number")
@@ -38,7 +38,7 @@ class Rectangle(Base):
 
     def height(self, value):
         """method height setter"""
-        if isinstance(value, int):
+        if not isinstance(value, int):
             raise TypeError ("Height must be an int")
         if value < 0:
             raise ValueError ("Height value must be 0 or more")
