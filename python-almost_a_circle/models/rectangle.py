@@ -92,3 +92,11 @@ class Rectangle(Base):
             for j in range(self.width):
                 print('#', end='')
             print()
+
+    """Task 6"""
+    def __str__(self):
+        """__str__ method that return is x/y width/height"""
+        return (
+            f"Rectangle ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+        )
