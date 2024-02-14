@@ -3,12 +3,10 @@
 Defining a class called base
 """
 
+
 class Base:
     """
     Class that defines a base
-
-    Attributes:
-        id
     """
     __nb_objects = 0
 
