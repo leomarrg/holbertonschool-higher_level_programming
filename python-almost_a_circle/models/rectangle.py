@@ -16,7 +16,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
+    """Task 2 and 3 """
     @property
     def width(self):
         """method width getter"""
@@ -72,3 +72,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+    """Task 4"""
+    """Public method that returns area of a rectangle"""
+    def area(self):
+        return self.__width * self.__height
