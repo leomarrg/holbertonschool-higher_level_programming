@@ -96,4 +96,6 @@ class Rectangle(Base):
     """Task 6"""
     def __str__(self):
         """__str__ method that return is x/y width/height"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
