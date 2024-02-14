@@ -87,7 +87,7 @@ class Rectangle(Base):
         """Public method that prints a rectangle #"""
         if self.width == 0 or self.height == 0:
             print("")
-    
+
         for i in range(self.height):
             for j in range(self.width):
                 print('#', end='')
