@@ -82,6 +82,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     """Task 5"""
+    """Task 7 is to take into consideration x and y"""
 
     def display(self):
         """Public method that prints a rectangle #"""
@@ -89,7 +90,11 @@ class Rectangle(Base):
             print("")
 
         for i in range(self.height):
+            if self.y > 0:
+                print("", self.y)
             for j in range(self.width):
+                if self.x > 0:
+                    print("" * self.x)
                 print('#', end='')
             print()
 
