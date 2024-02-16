@@ -39,6 +39,7 @@ class Square(Rectangle):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
     def to_dictionary(self):
         """Public method that returns a dictionary representation"""
         return {
