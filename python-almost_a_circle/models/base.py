@@ -61,3 +61,15 @@ class Base:
             raise ValueError("Unsupported class")
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        try:
+            with open(cls.__name__ + '.json', 'r') as file:
+                json_string = file.read()
+        except FileNotFoundError:
+            return []
+        list_dicts = cls.from_json_string(json_string)
+        instances = [cls.create(**d) for d in list_dicts]
+        return instances
