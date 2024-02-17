@@ -47,3 +47,29 @@ class Base:
             return json.loads(json_string)
         else:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance"""
+        if cls.__name__ == 'Rectangle':
+            from models.rectangle import Rectangle
+            dummy_instance = Rectangle(1, 1)
+        elif cls.__name__ == 'Square':
+            from models.square import Square
+            dummy_instance = Square(1)
+        else:
+            raise ValueError("Unsupported class")
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + '.json', 'r') as file:
+                json_string = file.read()
+        except FileNotFoundError:
+            return []
+        list_dicts = cls.from_json_string(json_string)
+        instances = [cls.create(**d) for d in list_dicts]
+        return instances
+
