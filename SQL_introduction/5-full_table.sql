@@ -1,2 +1,2 @@
 -- prints description of first table --
-SHOW COLUMNS FROM first_table;
+SHOW CREATE TABLE FROM first_table;
