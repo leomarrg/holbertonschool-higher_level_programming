@@ -21,12 +21,10 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    print("Before executing query")
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id", (name,))
+    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id;", (user_input,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
-    print("After executing query")
 
     rows = cur.fetchall()
     for row in rows:
