@@ -13,8 +13,10 @@ if __name__ == "__main__":
     password = argv[2]
     database = argv[3]
 
-    engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(\
-        username, password, database))
+    conn = "mysql://{}:{}@localhost:3306/{}".format(\
+        username, password, database)
+
+    engine = create_engine(conn)
     
     Session = sessionmaker(bind=engine)
 
@@ -25,4 +27,3 @@ if __name__ == "__main__":
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
-    session.close() 
