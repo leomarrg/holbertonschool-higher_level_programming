@@ -9,28 +9,29 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
-    state_name = sys.argv[4]
+    user_input = sys.argv[4]
 
     db = MySQLdb.connect(
         host="localhost",
         user=username,
         passwd=password,
         db=name,
-        st_name=state_name,
         port=3306
     )
     if (db):
         cur = db.cursor()
 
-        cur.execute("SELECT cities.id, cities.name, states.name \
+        cur.execute("SELECT cities.name \
                     FROM cities INNER JOIN states ON cities.state_id \
-                    = states.id ORDER BY id")
-        rows = cur.fetchall()
-        for row in rows:
-            print(row)
+                    = states.id WHERE states.name = %s;", (user_input,))
 
         rows = cur.fetchall()
-        for row in rows:
-            print(row)
+        num_rows = len(rows)
+        for i, row in enumerate(rows):
+            print(row[0], end='')
+            if i < num_rows - 1:
+                print(', ', end='')
+            else:
+                print("")
     else:
         print("Connection failed...")
