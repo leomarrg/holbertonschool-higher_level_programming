@@ -1,55 +1,21 @@
 #!/usr/bin/python3
-from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+""" lists all State objects """
+
 from sys import argv
-
-"""
-Script that connects to running server and lists all state objects
-"""
-
-if __name__ == "__main__":
-    username = argv[1]
-    password = argv[2]
-    database = argv[3]
-
-    conn = "mysql://{}:{}@localhost:3306/{}".format(\
-        username, password, database)
-
-    engine = create_engine(conn)
-    
-    Session = sessionmaker(bind=engine)
-
-    session = Session()
-
-    
-    for state in session.query(State).all:
-        print("{}: {}".format(state.id, state.name))
-#!/usr/bin/python3
-"""Lists all states object from the database"""
-
-
-import sys
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
-
 
 if __name__ == "__main__":
-    """Lists all state object from the database"""
+    """ Access to the database and get the states
+    from the database. """
 
-    user = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
-    engine = create_engine(
-        f"mysql+mysqldb://{user}:{password}@localhost:3306/{database}"
-    )
-    Base.metadata.create_all(engine)
+    dtb = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        argv[1], argv[2], argv[3])
+    engine = create_engine(dtb)
     Session = sessionmaker(bind=engine)
+
     session = Session()
 
-    for states in session.query(State).all():
-        print(f"{states.id}: {states.name}")
-
-    session.close()
+    for instance in session.query(State).order_by(State.id):
+        print('{0}: {1}'.format(instance.id, instance.name))
