@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     state = session.query(State).filter(State.name == user_input).first()
 
-    if state:    
+    if state:
         print(state.id)
     else:
         print("Not found")
